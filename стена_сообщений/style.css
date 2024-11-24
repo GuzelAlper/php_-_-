@@ -1,0 +1,114 @@
+/* Genel Ayarlar */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #444;
+    margin-top: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #45a049;
+}
+
+/* Konuşma Balonları */
+.message {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #e8f5ff;
+    /* Diğer kullanıcı mesaj rengi */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Mesaj sahibi kullanıcı için özel renk */
+.message.own {
+    background: #d1ffd6;
+}
+
+/* Konuşma Balonu Ucu */
+.message::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: #e8f5ff;
+    /* Balon ucunun rengi */
+}
+
+.message.own::after {
+    border-top-color: #d1ffd6;
+    /* Kullanıcı mesajı için balon ucu rengi */
+    left: auto;
+    right: 20px;
+}
+
+/* Mesaj Başlığı ve Zaman */
+.message strong {
+    font-size: 14px;
+    color: #555;
+}
+
+.message small {
+    display: block;
+    color: #777;
+    margin-top: 5px;
+    font-size: 12px;
+    text-align: right;
+}
+
+/* Silme Linki */
+.message a {
+    color: red;
+    text-decoration: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 12px;
+}
+
+.message a:hover {
+    text-decoration: underline;
+}
